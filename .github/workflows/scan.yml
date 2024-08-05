@@ -37,7 +37,7 @@ jobs:
       - name: Build
         run: docker pull ${{ inputs.image_tag }}
       - name: Scan
-        uses: docker/scout-action@v1
+        uses: felipecruz91/scout-action@817f0537bb54c64dd3d45cd0e721a64694b0686d
         with:
           command: cves,recommendations
           image: local://${{ inputs.image_tag }}
